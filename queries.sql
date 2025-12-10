@@ -1,3 +1,5 @@
+USE CourseRegistrationProcessingSystem;
+
 SELECT c.name, c.course_code FROM enrolled AS e NATURAL JOIN course AS c WHERE e.quarter="spring" AND e.year="2016" GROUP BY e.course_code HAVING COUNT(e.student_id) > 2; 
 
 -- SELECT s.student_name FROM student AS s WHERE
